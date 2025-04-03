@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Document</title>
+</head>
+<body>
+    <h1>Upload New Document</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="document">Document:</label>
+        <input type="file" name="document" required><br><br>
+        
+        <label for="category">Category:</label>
+        <select name="category" required>
+            <option value="WI">Work Instruction - WI</option>
+            <option value="PROCEDURE">PROCEDURE</option>
+            <option value="SASG">SASG</option>
+            <option value="RASG">RASG</option>
+            <option value="NASG">NASG</option>
+        </select><br><br>
+
+        <label for="subcategory">Sub Category:</label>
+        <input type="text" name="subcategory" required><br><br>
+
+        <label for="status">Status:</label>
+        <input type="text" name="status" required><br><br>
+
+        <label for="uploaded_by">Uploaded By:</label>
+        <input type="text" name="uploaded_by" required><br><br>
+
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
