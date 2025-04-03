@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <th>ชื่อไฟล์</th>
+        <th>สถานะ</th>
+        <th>ประเภท</th>
+        <th>กลุ่มย่อย</th>
+        <th>ดาวน์โหลด</th>
+    </tr>
+    {% for doc in documents %}
+    <tr>
+        <td>{{ doc.filename }}</td>
+        <td>{{ doc.status }}</td>
+        <td>{{ doc.category.name }}</td>
+        <td>{{ doc.subcategory.name }}</td>
+        <td><a href="{{ doc.filepath }}" download>Download</a></td>
+    </tr>
+    {% endfor %}
+</table>
